@@ -47,6 +47,8 @@ sub gen_sorter {
 1;
 # ABSTRACT: Sort by most similar to a reference string
 
+=for Pod::Coverage ^(meta|gen_sorter)$
+
 =head1 SYNOPSIS
 
  use Sorter::by_similarity;
@@ -59,37 +61,5 @@ sub gen_sorter {
 
 
 =head1 DESCRIPTION
-
-
-=head1 FUNCTIONS
-
-=head2 gen_sorter_by_similarity
-
-Usage:
-
- my $sorter = gen_sorter_by_similarity($is_reverse, $is_ci, \%args);
-
-Will generate a sorter subroutine C<$sorter> which accepts list and will sort
-them and return the sorted items. C<$is_reverse> is a bool, can be set to true
-to generate a reverse sorter (least similar items will be put first). C<$is_ci>
-is a bool, can be set to true to sort case-insensitively.
-
-Arguments:
-
-=over
-
-=item * string
-
-Str. Required. Reference string to be compared against each item.
-
-=back
-
-=head2 sort_by_similarity
-
-Usage:
-
- my @sorted = sort_by_similarity($is_reverse, $is_ci, \%args, @items);
-
-A shortcut to generate sorter and sort items with sorter in one go.
 
 =cut
