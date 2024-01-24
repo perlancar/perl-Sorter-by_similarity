@@ -56,9 +56,6 @@ sub gen_sorter {
  my $sorter = Sorter::by_similarity::gen_sorter(string => 'foo');
  my @sorted = $sorter->("food", "foolish", "foo", "bar"); #
 
- # or, in one go
- my @sorted = sort_by_similarity(0, 0, {string=>"foo"}, "food", "foolish", "foo", "bar");
-
 
 =head1 DESCRIPTION
 
