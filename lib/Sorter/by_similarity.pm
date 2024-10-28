@@ -14,6 +14,7 @@ use Text::Levenshtein::XS;
 sub meta {
     return +{
         v => 1,
+        summary => 'Sort by most similar to a reference string',
         args => {
             string => {schema=>'str*', req=>1},
             reverse => {schema => 'bool*'},
@@ -45,7 +46,7 @@ sub gen_sorter {
 }
 
 1;
-# ABSTRACT: Sort by most similar to a reference string
+# ABSTRACT:
 
 =for Pod::Coverage ^(meta|gen_sorter)$
 
